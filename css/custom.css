@@ -2,28 +2,28 @@
 	font-family: 'Munson';
 	font-style: normal;
 	font-weight: normal;
-	src: local('Munson Regular'), url('munson_roman.woff') format('woff');
+	src: local('Munson Regular'), url('fonts/munson_roman.woff') format('woff');
 }
 
 @font-face {
 	font-family: 'Munson';
 	font-style: italic;
 	font-weight: normal;
-	src: local('Munson Italic'), url('munson_italic.woff') format('woff');
+	src: local('Munson Italic'), url('fonts/munson_italic.woff') format('woff');
 }
 
 @font-face {
 	font-family: 'Munson';
 	font-style: normal;
 	font-weight: bold;
-	src: local('Munson Bold'), url('munson_bold.woff') format('woff');
+	src: local('Munson Bold'), url('fonts/munson_bold.woff') format('woff');
 }
 
 @font-face {
 	font-family: 'Munson';
 	font-style: italic;
 	font-weight: bold;
-	src: local('Munson Bold Italic'), url('munson_bolditalic.woff') format('woff');
+	src: local('Munson Bold Italic'), url('fonts/munson_bolditalic.woff') format('woff');
 }
 
 html {
