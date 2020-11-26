@@ -1,3 +1,31 @@
+@font-face {
+	font-family: 'Munson';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Munson Regular'), url('munson_roman.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Munson';
+	font-style: italic;
+	font-weight: normal;
+	src: local('Munson Italic'), url('munson_italic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Munson';
+	font-style: normal;
+	font-weight: bold;
+	src: local('Munson Bold'), url('munson_bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Munson';
+	font-style: italic;
+	font-weight: bold;
+	src: local('Munson Bold Italic'), url('munson_bolditalic.woff') format('woff');
+}
+
 html {
 	position: relative;
 	min-height: 100%;
@@ -6,7 +34,13 @@ html {
 body {
 	position: relative;
 	padding-top: 5rem;
-	background: black;
+	margin-bottom: 60px;
+	font-family: Munson;
+	background: white;
+}
+
+h1 {
+	font-weight: bold;
 }
 
 /* iframe {
@@ -37,7 +71,17 @@ body {
 	/*background-color: #f5f5f5;*/
 }
 
-.starter-template {
+.main-copy {
 	padding: 3rem 1.5rem;
 	text-align: center;
+}
+
+#masthead-logo {
+	max-height: 50px;
+	margin-bottom: .5rem;
+	width: auto;
+}
+
+#central-footer {
+	background-color: white;
 }
