@@ -9,10 +9,10 @@ window.onload = function () {
         controls: false,
     }
     player = new Twitch.Player("plyr", options)
+
+    // This doesn't work because Twitch starts async
     player.setVolume(0);
     player.setMuted(true);
-
-
 
     var testPeriodStart     = new Date(Date.UTC(2020, 11, 1, 16, 52, 0));
     var testPeriodEnd       = new Date(Date.UTC(2020, 11, 1, 16, 52, 15));
@@ -41,6 +41,8 @@ window.onload = function () {
             // This runs every few seconds during the show
             document.getElementById("countdown-container").style.visibility='hidden';
             document.getElementById("video-container").style.visibility='visible';
+            document.getElementById("header-text").style.visibility='visible';
+            
             player.setVolume(1);
             player.setMuted(false);
 
@@ -51,6 +53,7 @@ window.onload = function () {
         else {
             document.getElementById("countdown-container").style.visibility='visible';
             document.getElementById("video-container").style.visibility='hidden';
+            document.getElementById("header-text").style.visibility='hidden';
             player.setVolume(0);
             player.setMuted(true);
 
