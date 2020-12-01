@@ -1,6 +1,7 @@
 body {
 	padding-top: 5rem;
 	background:black;
+	overflow:hidden;
 }
 .starter-template {
 	padding: 3rem 1.5rem;
@@ -11,13 +12,17 @@ iframe {
 	display: block;
 	position: absolute;
 
-	top: -150px;
+	top: -2500px;
+	width: 100%;
 	margin-left: auto;   /* Automatic margin from left */ 
 	margin-right: auto; /* Automatic margin from right */ 
+
+	z-index: -100;
+	left: 0px;
 }
 
-/*
-iframe {
+
+/*iframe {
 	position: fixed;
 	right: 0;
 	bottom: 0;
