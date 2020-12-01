@@ -80,4 +80,9 @@ iframe {
 	color: white !important;
 	text-decoration-line: underline;
 	text-decoration-style: dotted;
+	text-shadow: 1px 1px #000000;
+}
+
+.navbar-brand {
+	text-shadow: 1px 1px #000000;
 }
