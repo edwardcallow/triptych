@@ -1,18 +1,5 @@
-
 // On page load
 window.onload = function () {
-    var options = {
-        width: "100%",
-        height: "100%",
-        channel: "triptychfestival",
-        parent: "triptychfestival.co.uk",
-        controls: false,
-    }
-    player = new Twitch.Player("plyr", options)
-
-    // This doesn't work because Twitch starts async
-    player.setVolume(0);
-    player.setMuted(true);
 
     var testPeriodStart     = new Date(Date.UTC(2020, 11, 1, 17, 10, 0));
     var testPeriodEnd       = new Date(Date.UTC(2020, 11, 1, 17, 10, 10));
@@ -26,8 +13,7 @@ window.onload = function () {
     var wednesdayShowStart  = new Date(Date.UTC(2020, 11, 3, 18, 50));
     var wednesdayShowEnd    = new Date(Date.UTC(2020, 11, 3, 20, 20));
 
-    setInterval(function() {
-        console.log("Scheduler running")
+    function update() {
 
         var now = Date.now();
 
@@ -43,10 +29,7 @@ window.onload = function () {
             document.getElementById("video-container").style.visibility='visible';
             document.getElementById("header-text").style.visibility='visible';
             
-            player.setVolume(1);
-            player.setMuted(false);
-
-            console.log("Currently in show")
+            console.log("Show running.")
         }
 
         // Not during a show?
@@ -54,11 +37,13 @@ window.onload = function () {
             document.getElementById("countdown-container").style.visibility='visible';
             document.getElementById("video-container").style.visibility='hidden';
             document.getElementById("header-text").style.visibility='hidden';
-            player.setVolume(0);
-            player.setMuted(true);
 
-            console.log("Not in show")
+            console.log("Show not running.")
         }
-    }, 500);
+    }
+
+    // Update every second and also once as soon as possible
+    setInterval(update, 1000);
+    setTimeout(update, 0);
     
 };
