@@ -1,6 +1,18 @@
 
 // On page load
-(function() {
+window.onload = function () {
+    var options = {
+        width: "100%",
+        height: "100%",
+        channel: "triptychfestival",
+        parent: "triptychfestival.co.uk",
+        controls: false,
+    }
+    player = new Twitch.Player("plyr", options)
+    player.setVolume(0);
+
+
+
     var testPeriodStart     = new Date(Date.UTC(2020, 11, 1, 04, 48, 0));
     var testPeriodEnd       = new Date(Date.UTC(2020, 11, 1, 05, 30, 0));
 
@@ -28,6 +40,7 @@
             // This runs every few seconds during the show
             document.getElementById("countdown-container").style.visibility='hidden';
             document.getElementById("video-container").style.visibility='visible';
+            player.setVolume(1);
 
             console.log("Currently in show")
         }
@@ -36,9 +49,10 @@
         else {
             document.getElementById("countdown-container").style.visibility='visible';
             document.getElementById("video-container").style.visibility='hidden';
+            player.setVolume(0);
 
             console.log("Not in show")
         }
     }, 3000);
     
-})();
+};
