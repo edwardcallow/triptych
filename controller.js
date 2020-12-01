@@ -56,6 +56,6 @@ window.onload = function () {
 
             console.log("Not in show")
         }
-    }, 3000);
+    }, 500);
     
 };
