@@ -10,11 +10,12 @@ window.onload = function () {
     }
     player = new Twitch.Player("plyr", options)
     player.setVolume(0);
+    player.setMuted(true);
 
 
 
-    var testPeriodStart     = new Date(Date.UTC(2020, 11, 1, 16, 49, 0));
-    var testPeriodEnd       = new Date(Date.UTC(2020, 11, 1, 16, 50, 0));
+    var testPeriodStart     = new Date(Date.UTC(2020, 11, 1, 16, 52, 0));
+    var testPeriodEnd       = new Date(Date.UTC(2020, 11, 1, 16, 52, 15));
 
     var mondayShowStart     = new Date(Date.UTC(2020, 11, 1, 18, 50));
     var mondayShowEnd       = new Date(Date.UTC(2020, 11, 1, 20, 20));
@@ -41,6 +42,7 @@ window.onload = function () {
             document.getElementById("countdown-container").style.visibility='hidden';
             document.getElementById("video-container").style.visibility='visible';
             player.setVolume(1);
+            player.setMuted(false);
 
             console.log("Currently in show")
         }
@@ -50,6 +52,7 @@ window.onload = function () {
             document.getElementById("countdown-container").style.visibility='visible';
             document.getElementById("video-container").style.visibility='hidden';
             player.setVolume(0);
+            player.setMuted(true);
 
             console.log("Not in show")
         }
