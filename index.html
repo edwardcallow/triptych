@@ -21,29 +21,70 @@
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
 		<!-- Custom styles -->
-		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<link rel="stylesheet" type="text/css" href="css/staging.css">
+
+		<script src="controller.js"></script>
 	</head>
 
 	<body>
+		<header>
+			<nav class="navbar navbar-expand-md fixed-top">
+				<span class="navbar-brand"><strong>triptych</strong></span>
+			</nav>
+		</header>
 		<main role="main" class="container">
-			<div class="main-copy">
+			<div class="starter-template" id="video-container" style="visibility: hidden;">
+				<!--<iframe
+					src="https://player.twitch.tv/?channel=jamescbaber&parent=triptychfestival.co.uk&!controls"
+					height="6000"
+					width="640"
+					frameborder="0"
+					scrolling="no"
+					allowfullscreen="true">
+				</iframe>-->
+
+				<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+				<div id="plyr"></div>
+				<script type="text/javascript">
+					var options = {
+						width: "100%",
+						height: "100%",
+						channel: "triptychfestival",
+						parent: "triptychfestival.co.uk",
+						controls: false,
+					}
+					var player = new Twitch.Player("plyr", options)
+					player.setVolume(1);
+				</script>
+			</div>
+			<div class="starter-template" id="countdown-container">
 				<h1>triptych</h1>
 				<p class="lead">A three-day, three-part festival. Live-streamed at 7pm on 1st, 2nd, 3rd December.</p>
 				<br/><br/>
 				<div class="row">
 					<div class="col-sm">
 						<img src="images/three_teams.png" class="img-fluid">
-						<br/><br/><br/>
 					</div>
 				</div>
-				<nav class="navbar fixed-bottom navbar-light" id="central-footer">
-					<a class="navbar-brand" href="https://www.cssd.ac.uk/event/triptych" target="_blank">
-						<img src="images/cssd_black.png" class="d-inline-block align-top" id="masthead-logo" />
-					</a>
-				</nav>
 			</div>
+			<!--<nav class="navbar fixed-bottom navbar-light">
+					<a class="navbar-brand" href="index.html">
+						<img src="images/cssd_white.svg" class="d-inline-block align-top" id="masthead-logo" />
+					</a>
+			</nav>-->
 		</main><!-- /.container -->
 
+		<footer>
+			<nav class="navbar navbar-expand-md fixed-bottom">
+				<span class="bottom-bar"><a href="https://www.cssd.ac.uk/event/triptych" target="_blank">about</a> | <a href="https://www.instagram.com/performancearts2022" target="_blank">instagram</a></span>
+			</nav>
+		</footer>
+		
+		<!--<footer class="footer fixed-bottom">
+			<div class="container">
+				<span class="text-muted">&copy; 2020 The Royal Central School of Speech and Drama.</span>
+			</div>
+		</footer>-->
 		<!-- Bootstrap core JavaScript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
