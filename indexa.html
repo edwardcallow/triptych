@@ -23,6 +23,7 @@
 		<!-- Custom styles -->
 		<link rel="stylesheet" type="text/css" href="css/staging.css">
 
+		<script src="controller.js"></script>
 	</head>
 
 	<body>
@@ -32,7 +33,7 @@
 			</nav>
 		</header>
 		<main role="main" class="container">
-			<div class="starter-template" id="video-container">
+			<div class="starter-template" id="video-container" style="visibility: hidden;">
 				<!--<iframe
 					src="https://player.twitch.tv/?channel=jamescbaber&parent=triptychfestival.co.uk&!controls"
 					height="6000"
@@ -55,6 +56,16 @@
 					var player = new Twitch.Player("plyr", options)
 					player.setVolume(1);
 				</script>
+			</div>
+			<div class="starter-template" id="countdown-container">
+				<h1>triptych</h1>
+				<p class="lead">A three-day, three-part festival. Live-streamed at 7pm on 1st, 2nd, 3rd December.</p>
+				<br/><br/>
+				<div class="row">
+					<div class="col-sm">
+						<img src="images/three_teams.png" class="img-fluid">
+					</div>
+				</div>
 			</div>
 			<!--<nav class="navbar fixed-bottom navbar-light">
 					<a class="navbar-brand" href="index.html">
