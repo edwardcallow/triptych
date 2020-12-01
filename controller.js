@@ -14,8 +14,8 @@ window.onload = function () {
     player.setVolume(0);
     player.setMuted(true);
 
-    var testPeriodStart     = new Date(Date.UTC(2020, 11, 1, 16, 52, 0));
-    var testPeriodEnd       = new Date(Date.UTC(2020, 11, 1, 16, 52, 15));
+    var testPeriodStart     = new Date(Date.UTC(2020, 11, 1, 17, 2, 0));
+    var testPeriodEnd       = new Date(Date.UTC(2020, 11, 1, 17, 2, 10));
 
     var mondayShowStart     = new Date(Date.UTC(2020, 11, 1, 18, 50));
     var mondayShowEnd       = new Date(Date.UTC(2020, 11, 1, 20, 20));
