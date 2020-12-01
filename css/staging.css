@@ -18,11 +18,10 @@ iframe {
 	position: absolute;
 
 	top: 0px;
-	width: 85%;
-	left: 7.5%;
-	text-align: center;
-	margin-left: auto;   /* Automatic margin from left */ 
-	margin-right: auto; /* Automatic margin from right */ 
+	left: 0px;
+
+	margin-left: auto;
+	margin-right: auto;
 
 	z-index: -100;
 }
