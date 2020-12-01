@@ -1,8 +1,8 @@
 // On page load
 window.onload = function () {
 
-    var testPeriodStart     = new Date(Date.UTC(2020, 11, 1, 17, 10, 0));
-    var testPeriodEnd       = new Date(Date.UTC(2020, 11, 1, 17, 10, 10));
+    var testPeriodStart     = new Date(Date.UTC(2020, 11, 1, 23, 27, 0));
+    var testPeriodEnd       = new Date(Date.UTC(2020, 11, 1, 23, 29, 0));
 
     var mondayShowStart     = new Date(Date.UTC(2020, 11, 1, 18, 50));
     var mondayShowEnd       = new Date(Date.UTC(2020, 11, 1, 20, 20));
