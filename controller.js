@@ -1,19 +1,21 @@
 
 // On page load
 (function() {
-    var testPeriodStart     = new Date('December 1, 2020 04:30:00');
-    var testPeriodEnd       = new Date('December 1, 2020 04:31:00');
+    var testPeriodStart     = new Date(Date.UTC(2020, 11, 1, 04, 48, 0));
+    var testPeriodEnd       = new Date(Date.UTC(2020, 11, 1, 04, 49, 0));
 
-    var mondayShowStart     = new Date('December 1, 2020 18:50:00');
-    var mondayShowEnd       = new Date('December 1, 2020 20:20:00');
+    var mondayShowStart     = new Date(Date.UTC(2020, 11, 1, 18, 50));
+    var mondayShowEnd       = new Date(Date.UTC(2020, 11, 1, 20, 20));
 
-    var tuesdayShowStart    = new Date('December 2, 2020 18:50:00');
-    var tuesdayShowEnd      = new Date('December 2, 2020 20:20:00');
+    var tuesdayShowStart    = new Date(Date.UTC(2020, 11, 2, 18, 50));
+    var tuesdayShowEnd      = new Date(Date.UTC(2020, 11, 2, 20, 20));
 
-    var wednesdayShowStart  = new Date('December 3, 2020 18:50:00');
-    var wednesdayShowEnd    = new Date('December 3, 2020 20:20:00');
+    var wednesdayShowStart  = new Date(Date.UTC(2020, 11, 3, 18, 50));
+    var wednesdayShowEnd    = new Date(Date.UTC(2020, 11, 3, 20, 20));
 
     setInterval(function() {
+        console.log("Scheduler running")
+
         var now = Date.now();
 
         var duringTest      = (now > testPeriodStart && now < testPeriodEnd);
@@ -27,7 +29,7 @@
             document.getElementById("countdown-container").style.visibility='hidden';
             document.getElementById("video-container").style.visibility='visible';
 
-            console.log("in show")
+            console.log("Currently in show")
         }
 
         // Not during a show?
@@ -35,7 +37,7 @@
             document.getElementById("countdown-container").style.visibility='visible';
             document.getElementById("video-container").style.visibility='hidden';
 
-            console.log("not in show")
+            console.log("Not in show")
         }
     }, 3000);
     
