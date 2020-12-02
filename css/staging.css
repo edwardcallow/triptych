@@ -63,6 +63,7 @@ iframe {
 */
 
 .starter-template {
+	display: block;
 	padding: 3rem 1.5rem;
 	text-align: center;
 	width: 100%;
