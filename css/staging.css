@@ -72,9 +72,16 @@ iframe {
 }
 
 .bottom-bar {
-	text-align: right !important;
 	width: 100%;
 	color: white !important;
+}
+
+.bb-right {
+	text-align: right !important;
+}
+
+.bb-left {
+	text-align: left !important;
 }
 
 .bottom-bar a {
