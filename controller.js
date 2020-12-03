@@ -11,7 +11,7 @@ window.onload = function () {
     var tuesdayShowEnd      = new Date(Date.UTC(2020, 11, 2, 20, 20));
 
     var wednesdayShowStart  = new Date(Date.UTC(2020, 11, 3, 18, 50));
-    var wednesdayShowEnd    = new Date(Date.UTC(2020, 11, 3, 20, 20));
+    var wednesdayShowEnd    = new Date(Date.UTC(2020, 11, 3, 19, 30));
 
     function update() {
 
